@@ -65,13 +65,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
                             isPrimary = true,
                             isClickable = true
                     ),
-                    YuvitalCardConfig("Track Daily Activity"),
-                    YuvitalCardConfig("Monitor Heart Health"),
-                    YuvitalCardConfig("Manage Fitness Goals"),
-                    YuvitalCardConfig("Nutrition & Hydration"),
+                    YuvitalCardConfig("Health Reports"),
+                    YuvitalCardConfig("Blood pressure"),
+                    YuvitalCardConfig("Heart rate"),
+                    YuvitalCardConfig("Nutrition"),
                     YuvitalCardConfig("Sleep & Recovery"),
-                    YuvitalCardConfig("Mindfulness & Stress"),
-                    YuvitalCardConfig("Health Reports")
+                    YuvitalCardConfig("Mindfulness"),
+                    YuvitalCardConfig("Walking"),
             )
 
     LazyVerticalGrid(
