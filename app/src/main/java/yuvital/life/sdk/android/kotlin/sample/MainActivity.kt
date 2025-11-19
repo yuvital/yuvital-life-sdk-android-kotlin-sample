@@ -1,5 +1,6 @@
 package yuvital.life.sdk.android.kotlin.sample
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -27,11 +28,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.yuvital.yuvitallife.sdk.ReactNativeHostActivity
 import yuvital.life.sdk.android.kotlin.sample.ui.theme.YuvitalLifeKotlinSampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -57,6 +60,7 @@ private data class YuvitalCardConfig(
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     val cards =
             listOf(
                     YuvitalCardConfig(
@@ -79,21 +83,26 @@ fun MainScreen(modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         items(cards) { card ->
-            YuvitalLifeCard(
-                    title = card.title,
-                    iconRes = card.iconRes,
-                    isPrimary = card.isPrimary,
-                    onClick =
-                            if (card.isClickable) {
-                                {
-                                    // Implement Yuvital Life SDK open call
-                                    Log.d("MainActivity", "Open Yuvital Life card clicked")
-                                }
-                            } else {
-                                null
-                            },
-                    modifier = Modifier.fillMaxWidth()
-            )
+                    YuvitalLifeCard(
+                            title = card.title,
+                            iconRes = card.iconRes,
+                            isPrimary = card.isPrimary,
+                            onClick =
+                                    if (card.isClickable) {
+                                        {
+                                            // Open Yuvital Life SDK screen
+                                            val intent =
+                                                    Intent(
+                                                            context,
+                                                            ReactNativeHostActivity::class.java
+                                                    )
+                                            context.startActivity(intent)
+                                        }
+                                    } else {
+                                        null
+                                    },
+                            modifier = Modifier.fillMaxWidth()
+                    )
         }
     }
 }
