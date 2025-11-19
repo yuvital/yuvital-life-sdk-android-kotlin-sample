@@ -16,6 +16,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://jitpack.io")
+        maven {
+            //Staging: yuvital-life-sdk-staging
+            //Production: yuvital-life-sdk-production
+            url = uri("https://dl.cloudsmith.io/basic/yuvital/yuvital-life-sdk-staging/maven/")
+            credentials {
+                username = "token"
+                password = providers.gradleProperty("yuvitalLifeSdkPassword").get()
+            }
+        }
     }
 }
 
