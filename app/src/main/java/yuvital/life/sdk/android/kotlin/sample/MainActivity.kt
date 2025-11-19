@@ -65,13 +65,11 @@ fun MainScreen(modifier: Modifier = Modifier) {
                             isPrimary = true,
                             isClickable = true
                     ),
-                    YuvitalCardConfig("Health Reports"),
-                    YuvitalCardConfig("Blood pressure"),
-                    YuvitalCardConfig("Heart rate"),
-                    YuvitalCardConfig("Nutrition"),
-                    YuvitalCardConfig("Sleep & Recovery"),
-                    YuvitalCardConfig("Mindfulness"),
-                    YuvitalCardConfig("Walking"),
+                    YuvitalCardConfig("Heart rate", R.drawable.heart),
+                    YuvitalCardConfig("Nutrition", R.drawable.nutrition),
+                    YuvitalCardConfig("Sleep & Recovery",R.drawable.sleep),
+                    YuvitalCardConfig("Mindfulness", R.drawable.mindfulness),
+                    YuvitalCardConfig("Walking", R.drawable.walking),
             )
 
     LazyVerticalGrid(
@@ -116,19 +114,11 @@ fun YuvitalLifeCard(
                 baseModifier
             }
 
-    // Yuvital Life = primary (blue), others = grey
     val colors =
             if (isPrimary) {
                 CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary)
             } else {
-                CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-            }
-
-    val textColor =
-            if (isPrimary) {
-                MaterialTheme.colorScheme.onPrimary
-            } else {
-                MaterialTheme.colorScheme.onSurface
+                CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.onSurface)
             }
 
     Card(modifier = cardModifier, colors = colors) {
@@ -147,7 +137,7 @@ fun YuvitalLifeCard(
                             MaterialTheme.typography.titleMedium.copy(
                                     fontWeight = FontWeight.SemiBold
                             ),
-                    color = textColor,
+                    color = MaterialTheme.colorScheme.onPrimary,
                     textAlign = TextAlign.Start
             )
         }
