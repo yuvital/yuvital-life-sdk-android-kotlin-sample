@@ -101,7 +101,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
 @Composable
 fun YuvitalLifeCard(
         title: String,
-        @DrawableRes iconRes: Int = R.drawable.ic_launcher_foreground,
+        @DrawableRes iconRes: Int,
         modifier: Modifier = Modifier,
         isPrimary: Boolean = false,
         onClick: (() -> Unit)? = null
