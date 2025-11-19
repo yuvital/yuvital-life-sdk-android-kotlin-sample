@@ -65,11 +65,11 @@ fun MainScreen(modifier: Modifier = Modifier) {
                             isPrimary = true,
                             isClickable = true
                     ),
-                    YuvitalCardConfig("Heart rate", R.drawable.heart),
-                    YuvitalCardConfig("Nutrition", R.drawable.nutrition),
-                    YuvitalCardConfig("Sleep & Recovery",R.drawable.sleep),
-                    YuvitalCardConfig("Mindfulness", R.drawable.mindfulness),
-                    YuvitalCardConfig("Walking", R.drawable.walking),
+                    YuvitalCardConfig("Heart rate", R.drawable.heart_metric_icon),
+                    YuvitalCardConfig("Nutrition", R.drawable.nutrition_metric_icon),
+                    YuvitalCardConfig("Sleep & Recovery",R.drawable.sleep_metric_icon),
+                    YuvitalCardConfig("Mindfulness", R.drawable.mindfulness_metric_icon),
+                    YuvitalCardConfig("Walking", R.drawable.walking_metric_icon),
             )
 
     LazyVerticalGrid(
