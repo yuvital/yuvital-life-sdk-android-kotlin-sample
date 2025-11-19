@@ -71,7 +71,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                     ),
                     YuvitalCardConfig("Heart rate", R.drawable.heart_metric_icon),
                     YuvitalCardConfig("Nutrition", R.drawable.nutrition_metric_icon),
-                    YuvitalCardConfig("Sleep & Recovery",R.drawable.sleep_metric_icon),
+                    YuvitalCardConfig("Sleep",R.drawable.sleep_metric_icon),
                     YuvitalCardConfig("Mindfulness", R.drawable.mindfulness_metric_icon),
                     YuvitalCardConfig("Walking", R.drawable.walking_metric_icon),
             )
