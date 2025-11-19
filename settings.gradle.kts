@@ -20,7 +20,7 @@ dependencyResolutionManagement {
         maven {
             //Staging: yuvital-life-sdk-staging
             //Production: yuvital-life-sdk-production
-            url = uri("https://dl.cloudsmith.io/basic/yuvital/yuvital-life-sdk-staging/maven/")
+            url = uri("https://dl.cloudsmith.io/basic/yuvital/yuvital-life-sdk-production/maven/")
             credentials {
                 username = "token"
                 password = providers.gradleProperty("yuvitalLifeSdkPassword").get()
