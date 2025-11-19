@@ -1,3 +1,26 @@
+# YuviTal Life SDK - [Platform: iOS/Android] Integration Guide v1.0.0
+
+The YuviTal Life SDK allows you to easily integrate YuviTal Life functionality into your mobile application.
+
+---
+
+## Compatibility Notice
+
+This SDK is designed exclusively for **native mobile applications** developed using:
+
+-   **iOS:** Swift or Objective-C
+-   **Android:** Kotlin or Java
+
+> **IMPORTANT:** This SDK is **NOT compatible** with hybrid frameworks, including **React Native**. Integration into such frameworks is not supported at this moment.
+
+### Prerequisites
+
+-   **Target OS:** iOS 15.5+ / Android API 29+
+
+### Installation
+
+-   **Android**
+
 **Maven repository**
 
 Accessing the Yuvital Life SDK requires credential configuration. Please don't share these credentials in version control.
@@ -31,5 +54,13 @@ yuvitalLifeSdkPassword=YOUR_PASSWORD
         }
      }
  }
+```
+
+**Add the dependency to your app's `build.gradle.kts`**
+
+```kotlin
+dependencies {
+        implementation("com.yuvital:yuvitallife-sdk:1.1.6")
+}
 ```
 
