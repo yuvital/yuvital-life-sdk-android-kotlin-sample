@@ -64,3 +64,8 @@ dependencies {
 }
 ```
 
+### Debug build limitation
+
+> **Note:** The YuviTal Life SDK currently **does not work in Android debug builds**.  
+> It is fully supported in **release / signed builds** only.  
+> Debug support is a work in progress and will be addressed in a future SDK version.
