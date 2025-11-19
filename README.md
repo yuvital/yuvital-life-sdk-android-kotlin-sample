@@ -1,6 +1,6 @@
-# YuviTal Life SDK - [Platform: iOS/Android] Integration Guide v1.0.0
+# YuviTal Life SDK - Android (Kotlin) Sample Integration Guide
 
-The YuviTal Life SDK allows you to easily integrate YuviTal Life functionality into your mobile application.
+This repository contains an **Android Kotlin sample application** that demonstrates how to integrate the YuviTal Life SDK into a native Android app.
 
 ---
 
@@ -8,18 +8,20 @@ The YuviTal Life SDK allows you to easily integrate YuviTal Life functionality i
 
 This SDK is designed exclusively for **native mobile applications** developed using:
 
--   **iOS:** Swift or Objective-C
--   **Android:** Kotlin or Java
+- **iOS:** Swift or Objective-C
+- **Android:** Kotlin or Java
+
+For iOS integration, refer to the corresponding **YuviTal Life iOS integration guide or sample project** in your documentation.
 
 > **IMPORTANT:** This SDK is **NOT compatible** with hybrid frameworks, including **React Native**. Integration into such frameworks is not supported at this moment.
 
 ### Prerequisites
 
--   **Target OS:** iOS 15.5+ / Android API 29+
+- **Target OS:** iOS 15.5+ / Android API 29+
 
 ### Installation
 
--   **Android**
+- **Android**
 
 **Maven repository**
 
