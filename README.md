@@ -58,7 +58,7 @@ yuvitalLifeSdkPassword=YOUR_PASSWORD
 ```kotlin
 dependencies {
     // Other dependencies...
-    implementation("com.yuvital:yuvitallife-sdk:2.1.1")
+    implementation("com.yuvital:yuvitallife-sdk:2.5.1")
 }
 ```
 
